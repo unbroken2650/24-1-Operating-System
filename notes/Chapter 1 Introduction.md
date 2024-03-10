@@ -28,10 +28,14 @@
 <p>컴퓨터의 하드웨어를 제어하고 다양한 사용자와 다양한 App에 맞추어 편성하는 소프트웨어</p>
 <h3 id="user-view">User View</h3>
 <p><img src="https://i.imgur.com/ZDZJMiR.png" alt="Untitled"></p>
-<p>User’s View는 컴퓨터가 사용되는 인터페이스에 따라 달라진다. 최근 모바일 기기의 사용이 늘면서 터치 스크린이나 음성 인식이 도입됨</p>
-<p>임베디드 컴퓨터의 경우 User View가 없음</p>
+<p>User’s View는 컴퓨터가 사용되는 인터페이스에 따라 달라진다.</p>
+<ul>
+<li>일반적인 사용의 경우 사용이 쉽도록</li>
+<li>임베디드 컴퓨팅의 경우 사용자와의 접촉이 없음</li>
+</ul>
+<p>최근 모바일 기기의 사용이 늘면서 터치 스크린이나 음성 인식이 도입됨</p>
 <h3 id="system-view">System View</h3>
-<p>OS는 <strong>자원 할당자</strong> + 에러를 막고 컴퓨터의 부적절한 사용을 막기 위해 프로그램의 실행을 관리하는 <strong>제어 프로그램</strong></p>
+<p>OS는 <strong>자원 할당자</strong> 역할+ 에러를 막고 컴퓨터의 부적절한 사용을 막기 위해 프로그램의 실행을 관리하는 <strong>제어 프로그램</strong></p>
 <h3 id="definition">Definition</h3>
 <ul>
 <li>
