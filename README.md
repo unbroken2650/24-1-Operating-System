@@ -5,4 +5,4 @@
 [참고 페이지](https://unbroken2650.notion.site/7f67e45c6f5a44adbf85bb594bd1f03e?pvs=4)
 
 
-[jaegeun7/miniOS](https://github.com/jaegeun7/miniOS)
+[jaegeun7/miniOS](https://github.com/jaegeun7/miniOS) --forked-> [unbroken2650/miniOS](https://github.com/unbroken2650/miniOS)
