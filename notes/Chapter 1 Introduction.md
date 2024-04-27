@@ -3,7 +3,7 @@
 Subject: Introduction
 Lecture: 운영체제 (https://www.notion.so/2161ecba840949b59723a257600ae498?pvs=21)
 Category: 노트
-Progress: 공부중
+Progress: 완료
 
 - Content
 
@@ -15,7 +15,7 @@ Progress: 공부중
 - How OSs are used in various computing environments
 - Exs of free and open-source OSs
 
-# What Operating Systems Do
+# 1.1 What Operating Systems Do
 
 Computer System = Hardware + OS + Application programs + User
 
@@ -54,7 +54,7 @@ OS는 **자원 할당자** 역할+ 에러를 막고 컴퓨터의 부적절한 �
 - OS를 개발하기 위해
 - 모든 프로그램이 OS 위에서 실행되기 때문에 -> 효율적인 프로그램 제작
 
-# Computer-System Organization
+# 1.2 Computer-System Organization
 
 ![https://i.imgur.com/jLREcqE.png](https://i.imgur.com/jLREcqE.png)
 
@@ -176,7 +176,7 @@ CPU의 간섭 없음
 
 스위치를 사용하거나 공유 시스템 버스를 사용
 
-# Computer-System Architecture
+# 1.3 Computer-System Architecture
 
 ## Single-Processor Systems
 
@@ -192,23 +192,23 @@ Multiple cores(PC) / CPU chips(서버)
 
 ### SMP(Symmetric multiprocessing)
 
-![](https://i.imgur.com/fchlZih.png)
+![Untitled](Chapter%201%20ab5de36306fb4f2b9ecb9be8f7051d83/Untitled.png)
 
 프로세스를 동시에 실행 
 
 ### Multicore Processor
 
-![](https://i.imgur.com/pdqXxNf.png)
+![Untitled](Chapter%201%20ab5de36306fb4f2b9ecb9be8f7051d83/Untitled%201.png)
 
 ### Non-uniform memory access(NUMA)
 
-![](https://imgur.com/FEWBFpg.png)
+![Untitled](Chapter%201%20ab5de36306fb4f2b9ecb9be8f7051d83/Untitled%202.png)
 
 Blade servers : 여러 개의 보드
 
 Clustered systems(네트워크 연결) : 고장 잘 안 남, [hot-standby(asym) / monitor(sym)], HPC
 
-# Operating-System Operations
+# 1.4 Operating-System Operations
 
 Bootstrap program → Kernel
 
@@ -245,7 +245,7 @@ Multitasking : logical extension
 
 - Context switching을 수시로 진행
 
-![](https://i.imgur.com/wMv7ZfK.png)
+![Untitled](Chapter%201%20ab5de36306fb4f2b9ecb9be8f7051d83/Untitled%203.png)
 
 ### Dual-Mode and Multimode Operation
 
@@ -258,10 +258,148 @@ ex) I/O control
 
 **Multimode** : 여러 개의 모드를 활용
 
-![](https://i.imgur.com/IT9x0hZ.png)
+![Untitled](Chapter%201%20ab5de36306fb4f2b9ecb9be8f7051d83/Untitled%204.png)
 
 ### Timer
 
 무한 반복문이나 대기에서 빠져나오기 위해 주기적으로 인터럽트를 발생
 
 ex) HZ = # of interrupts per second
+
+# 1.5 Resource Management
+
+- Process Management : 프로세스에 필요한 자원(CPU, 메모리, 파일, 입출력 장치) 관리
+- Memory Management : 메모리 공간과 프로세스를 추적하여 할당/제거
+- File-System Management : 저장공간의 논리적 view인 File을 관리
+- Mass-Storage Management : HDD, SSD 관리
+- I/O System Management : 특정 하드웨어를 위한 관리
+→ I/O Subsystem : CPU쪽은 동일하고 장치 쪽에서 Device driver
+- Cache Management
+
+![https://i.imgur.com/xO8l6he.png](https://i.imgur.com/xO8l6he.png)
+
+# 1.6 Security and Protection
+
+### Protection
+
+프로세스나 사용자가 자원에 접근하는 것을 통제하는 것
+허가/무허가 사용을 구분
+
+### Security
+
+내/외부 공격을 막는 것
+
+### Distinguishing users
+
+user identifier(user ID)를 활용하여 사용자를 관리
+
+group으로 묶어서 하기도 함
+
+# 1.7 Virtualization
+
+Virtualization : 한 컴퓨터의 하드웨어를 여러 실행환경으로 추상화하는 것
+
+Emulation : 소프트웨어를 이용하여 하드웨어를 시뮬레이션하는 것
+= heavy price & performance degradation
+
+# 1.8 Distributed Systems
+
+여러 컴퓨터 시스템을 모아서 사용하는 것
+
+heterogeneous : 컴퓨터들이 서로 다를 수 있음
+
+NFS(파일이 연결), FTP(컴퓨터가 연결)
+
+# 1.9 Kernel Data Structures
+
+### Lists
+
+데이터가 순차적으로 배열된 것
+
+- singly, doubly, circularly
+- 가변적인 크기, 원소 쉽게 삽입/삭제
+- 성능상의 단점 : O(n)
+
+### Stacks
+
+Last In, First Out(LIFO) - 후입선출
+
+- push / pop
+
+### Queues
+
+First In, First Out(FIFO) - 선입선출
+
+### Trees
+
+- Hierachy : Parent-Child 관계로 연결된 원소들
+- general / binary
+- binary search - left child ← parent ← right child
+worst case $O(n)$ ⇒ Balanced binary search tree $O(log_2(n))$
+
+### Hash Functions and Maps
+
+Hash Function : 입력값이 함수를 통해 index로 매핑되는 테이블 
+
+Hash collision 발생할 가능성 있음 → Hash map(key-value 관계의 자료 구조)
+
+# 1.10 Computing Environments
+
+**Traditional** : PC, file/print server, laptop → portal to server
+
+- batch → interactive
+- time sharing → multiprogramming / multitasking
+
+**Mobile**, **Client-Server**
+
+**Peer-to-Peer**
+
+- centralized service lookup service,  discovery protocol
+
+![https://i.imgur.com/Dzbfu8W.png](https://i.imgur.com/Dzbfu8W.png)
+
+**Cloud**
+
+연산 장치, 저장소, 응용 프로그램을 서비스로 제공
+
+ex) Saas, PaaS, IaaS
+
+![https://i.imgur.com/Y8CJ2Co.png](https://i.imgur.com/Y8CJ2Co.png)
+
+**Real-Time Embedded Systems**
+
+특정한 task를 위한 시스템, 제한된 기능을 제공, UI가 없거나 최소한
+
+- Real-Time OS
+
+# 1.11 Free and Open-Source Operating Systems
+
+### Free software
+
+무료 사용/재배포/수정
+
+### Open-source software
+
+배포나 코드를 공개
+
+### Closed-source
+
+MS Windows
+
+### Hybrid approach
+
+Apple macOS
+
+### GNU/Linux
+
+GNU + Linux, 다양한 배포판
+
+### BSD UNIX
+
+FreeBSD, Solaris
+
+# Summary
+
+![https://i.imgur.com/0cTu7pU.png](https://i.imgur.com/0cTu7pU.png)
+
+![https://i.imgur.com/QrblCEk.png](https://i.imgur.com/QrblCEk.png)
