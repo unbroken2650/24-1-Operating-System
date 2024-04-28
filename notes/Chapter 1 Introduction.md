@@ -1,11 +1,13 @@
 # Chapter 1
 
 Subject: Introduction
-Lecture: 운영체제 (https://www.notion.so/2161ecba840949b59723a257600ae498?pvs=21)
+
+Lecture: 운영체제
+
 Category: 노트
+
 Progress: 완료
 
-- Content
 
 ### **Objectives**
 
