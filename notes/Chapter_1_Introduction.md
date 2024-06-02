@@ -2,11 +2,6 @@
 
 Subject: Introduction
 
-Lecture: 운영체제
-
-Category: 노트
-
-Progress: 완료
 
 
 ### **Objectives**

@@ -3,14 +3,6 @@
 Subject: Process
 
 
-Lecture: 운영체제 (https://www.notion.so/2161ecba840949b59723a257600ae498?pvs=21)
-
-
-Category: 노트
-
-
-Progress: 완료
-
 
 # 3.1 Process Concept
 
